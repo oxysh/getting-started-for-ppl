@@ -1,0 +1,129 @@
+.landing {
+    margin-bottom: 5rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2rem;
+
+    &__todo-container {
+        width: 100%;
+        padding: 1.5rem;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 1rem;
+        border-radius: .5rem;
+        border: 2px solid rgba($french-lilac, 0.5);
+    }
+
+    &__todo-checklist {
+        align-self: center;
+    }
+
+    &__checklist--modified {
+        width: 1.2rem;
+        height: 1.2rem;
+        border-radius: 50%;
+        outline: 1px solid $french-lilac;
+        outline-offset: .25rem;
+        z-index: 1;
+
+        &.active {
+            background-color: $french-lilac;
+        }
+    }
+
+    &__todo-content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: .25rem;
+    }
+
+    &__todo-note {
+        padding-top: .25rem;
+    }
+
+    &__todo-place {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: .1rem;
+
+        >img {
+            width: 1rem;
+        }
+    }
+
+    &__todo-delete {
+        padding: 0;
+
+        img {
+            width: 1.5rem;
+        }
+    }
+
+    &__footer-container {
+        width: 100%;
+        position: fixed;
+        bottom: 1rem;
+    }
+
+    &__footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    &__footer-add-note {
+        width: 100%;
+        height: 3rem;
+        position: relative;
+
+        >input[type='text'] {
+            width: 100%;
+            position: absolute;
+            padding: 1rem 2rem;
+            border-radius: 50rem;
+            border: 1px solid $french-lilac;
+
+            &:focus,
+            &:focus-within,
+            &:focus-visible {
+                outline: none;
+            }
+        }
+
+        &.active>input[type='text'] {
+            width: calc(100% + 4rem);
+        }
+    }
+
+    &__footer-add-btn {
+        padding: .25rem;
+
+        >img {
+            width: 2.5rem;
+        }
+
+        &.active {
+            visibility: hidden;
+        }
+    }
+
+    &__no-todo {
+        margin-top: 3rem;
+        color: $rythim;
+    }
+
+    @media screen and (max-width: 768px) {
+        &__title {
+            align-self: flex-start;
+        }
+    }
+}
