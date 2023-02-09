@@ -13,6 +13,7 @@
 
 @section('content')
     <h1 class="landing__title">My To-Do List</h1>
+    <h1 class="add-edit-todo__title">TROLOLOLOL</h1>
     @if (count($todo) > 0)
         @foreach ($todo as $item)
             <div class="landing__todo-container">
